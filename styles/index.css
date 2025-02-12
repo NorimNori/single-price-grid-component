@@ -59,79 +59,86 @@ body {
   flex-direction: column;
   gap: 1.2em;
   background-color: hsl(204, 43%, 93%);
-  border-radius: 5px 5px 0 0;
   padding: 1.5em;
+  border-radius: 5px 5px 0 0;
 }
 .subscription__title {
-  color: hsl(179, 62%, 43%);
   font-size: 1.35rem;
+  font-weight: 700;
+  color: hsl(179, 62%, 43%);
   letter-spacing: 0.01em;
 }
 .subscription__guarantee {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  color: hsl(71, 73%, 54%);
   font-size: 1rem;
   font-weight: 700;
+  color: hsl(71, 73%, 54%);
 }
 .subscription__description {
+  font-size: 0.85rem;
+  font-weight: 400;
   color: hsl(218, 22%, 67%);
   font-size: 0.85rem;
   line-height: 1.5;
 }
 .subscription__pricing {
-  gap: 1em;
   background-color: hsl(179, 62%, 43%);
-  color: hsl(204, 43%, 93%);
   padding: 1.5em;
+  border-radius: 5px;
+  color: hsl(204, 43%, 93%);
 }
 .subscription__pricing-title {
   font-size: 1.1rem;
   font-weight: 700;
+  color: inherit;
 }
 .subscription__price {
   padding: 0.8em 0 0.4em;
 }
 .subscription__price-value {
   font-size: 1.7rem;
+  font-weight: 700;
+  color: inherit;
 }
 .subscription__price-description {
   font-size: 1rem;
 }
 .subscription__price-period {
   font-size: 1rem;
+  font-weight: 400;
   color: hsla(204, 43%, 93%, 0.8);
   margin-left: 0.5em;
 }
 .subscription__button {
   background-color: hsl(71, 73%, 54%);
+  padding: 1em;
+  border-radius: 5px;
   font-size: 0.9rem;
   font-weight: 700;
+  color: hsl(204, 43%, 93%);
   width: 100%;
   border: none;
-  padding: 1em;
   margin: 2em 0 0;
-  border-radius: 5px;
-  color: hsl(204, 43%, 93%);
   box-shadow: 0 6px 20px hsla(0, 0%, 0%, 0.2);
 }
 .subscription__benefits {
   display: flex;
   flex-direction: column;
   gap: 1.2em;
-  text-align: start;
   background-color: hsl(178, 49%, 51%);
-  color: hsl(204, 43%, 93%);
-  border-radius: 0 0 5px 5px;
   padding: 1.5em;
+  border-radius: 0 0 5px 5px;
+  text-align: start;
+  color: hsl(204, 43%, 93%);
 }
 .subscription__benefits-title {
   font-size: 1.1rem;
   font-weight: 700;
+  color: inherit;
 }
 .subscription__benefits-list {
-  width: 100%;
   padding: 0;
   margin: 0;
   line-height: 1.4;

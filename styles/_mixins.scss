@@ -2,3 +2,23 @@
     display: grid;
     place-items: center;
 }
+
+@mixin flex-column($gap: 1em) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
+@mixin box-style($bg-color, $padding: 1.5em, $radius: 5px) {
+  background-color: $bg-color;
+  padding: $padding;
+  border-radius: $radius;
+}
+
+@mixin font-style($size, $weight: 400, $color: inherit) {
+  font: {
+      size: $size;
+      weight: $weight;
+  }
+  color: $color;
+}

@@ -9,44 +9,32 @@
     margin: 3rem 0;
 
     &__info {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2em;
-        background-color: colors.$lightGray;
-        border-radius: 5px 5px 0 0;
-        padding: 1.5em;
+        @include mixins.flex-column(1.2em);
+        @include mixins.box-style(colors.$lightGray, 1.5em, 5px 5px 0 0);
     }
 
     &__title {
-        color: colors.$cyan;
-        font-size: 1.35rem;
+        @include mixins.font-style(1.35rem, 700, colors.$cyan);
         letter-spacing: 0.01em;
     }
 
     &__guarantee {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5em;
-        color: colors.$brightYellow;
-        font-size: 1rem;
-        font-weight: 700;
+        @include mixins.flex-column(1.5em);
+        @include mixins.font-style(1rem, 700, colors.$brightYellow);
     }
 
     &__description {
-        color: colors.$grayishBlue;
+        @include mixins.font-style(.85rem, 400, colors.$grayishBlue);
         font-size: .85rem;
         line-height: 1.5;
     }
 
     &__pricing {
-        gap: 1em;
-        background-color: colors.$cyan;
+        @include mixins.box-style(colors.$cyan);
         color: colors.$lightGray;
-        padding: 1.5em;
 
         &-title {
-            font-size: 1.1rem;
-            font-weight: 700;
+            @include mixins.font-style(1.1rem, 700);
         }
     }
 
@@ -54,7 +42,7 @@
         padding: .8em 0 .4em;
         
         &-value {
-            font-size: 1.7rem;
+            @include mixins.font-style(1.7rem, 700);
         }
 
         &-description {
@@ -62,42 +50,31 @@
         }
     
         &-period {
-            font-size: 1rem;
-            color: colors.$transparentLightGray;
+            @include mixins.font-style(1rem, 400, colors.$transparentLightGray);
             margin-left: .5em;
         }
     }
     
     &__button {
-        background-color: colors.$brightYellow;
-        font-size: .9rem;
-        font-weight: 700;
+        @include mixins.box-style(colors.$brightYellow, 1em, 5px);
+        @include mixins.font-style(.9rem, 700, colors.$lightGray);
         width: 100%;
         border: none;
-        padding: 1em;
         margin: 2em 0 0;
-        border-radius: 5px;
-        color: colors.$lightGray;
         box-shadow: 0 6px 20px colors.$shadowBlack
     }
     
     &__benefits {
-        display: flex;
-        flex-direction: column;
-        gap: 1.2em;
+        @include mixins.flex-column(1.2em);
+        @include mixins.box-style(colors.$brightCyan, 1.5em, 0 0 5px 5px);
         text-align: start;
-        background-color: colors.$brightCyan;
         color: colors.$lightGray;
-        border-radius: 0 0 5px 5px;
-        padding: 1.5em;
 
         &-title {
-            font-size: 1.1rem;
-            font-weight: 700;
+            @include mixins.font-style(1.1rem, 700)
         }
 
         &-list {
-            width: 100%;
             padding: 0;
             margin: 0;
             line-height: 1.4;
