@@ -96,11 +96,11 @@
 
 footer {
     font-size: .7rem;
-    color: black;
+    color: colors.$darkNavyBlue;
     padding-bottom: 1rem;
     a { 
         text-align: center;
-        color: green
+        color: colors.$darkCyan
     }
 }
 

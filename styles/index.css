@@ -157,12 +157,12 @@ body {
 
 footer {
   font-size: 0.7rem;
-  color: black;
+  color: hsl(218, 44%, 22%);
   padding-bottom: 1rem;
 }
 footer a {
   text-align: center;
-  color: green;
+  color: hsl(179, 62%, 30%);
 }
 
 @media (min-width: 1024px) {
