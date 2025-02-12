@@ -5,8 +5,12 @@
 @include styleFormatting.formatting;
 
 .subscription {
+    display: grid;
     width: 85vw;
+    max-width: 25rem;
     margin: 3rem 0;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px colors.$grayishBlue;
 
     &__info {
         @include mixins.flex-column(1.2em);
@@ -14,18 +18,17 @@
     }
 
     &__title {
-        @include mixins.font-style(1.35rem, 700, colors.$cyan);
+        @include mixins.font-style(clamp(1.35rem, 1.297rem + 0.225vw, 1.5rem), 700, colors.$cyan);
         letter-spacing: 0.01em;
     }
 
     &__guarantee {
         @include mixins.flex-column(1.5em);
-        @include mixins.font-style(1rem, 700, colors.$brightYellow);
+        @include mixins.font-style(clamp(1rem, 0.982rem + 0.075vw, 1.05rem), 700, colors.$brightYellow);
     }
 
     &__description {
-        @include mixins.font-style(.85rem, 400, colors.$grayishBlue);
-        font-size: .85rem;
+        @include mixins.font-style(clamp(0.85rem, 0.815rem + 0.15vw, 0.95rem), 400, colors.$grayishBlue);
         line-height: 1.5;
     }
 
@@ -61,7 +64,15 @@
         width: 100%;
         border: none;
         margin: 2em 0 0;
-        box-shadow: 0 6px 20px colors.$shadowBlack
+        cursor: pointer;
+        box-shadow: 0 6px 20px colors.$shadowBlack;
+        transition: background 0.5s ease, transform 0.4s ease;
+
+        &:hover {
+            background: darken(colors.$brightYellow, 10%);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px colors.$shadowBlack;
+        }
     }
     
     &__benefits {
@@ -90,5 +101,40 @@ footer {
     a { 
         text-align: center;
         color: green
+    }
+}
+
+@media (min-width: 1024px) {
+    .subscription {
+        max-width: 38rem;
+        grid-template-areas: 
+        "info info"
+        "pricing benefits";
+        grid-template-columns: 1fr 1fr;
+
+        &__info {
+            grid-area: info;
+            padding: 2.1em 3.9em 2.1em 2.1em;   
+        }
+
+        &__description {
+            letter-spacing: 0.01em;
+            margin-top: -.7em;
+        }
+
+        &__pricing {
+            @include mixins.flex-column(0);
+            justify-content: space-between;
+            grid-area: pricing;
+            padding: 2em;
+            border-radius: 0 0 0 5px;
+        }
+
+        &__benefits {
+            grid-area: benefits;
+            gap: 1em;
+            padding: 2em;
+            border-radius: 0 0 5px 0;
+        }
     }
 }

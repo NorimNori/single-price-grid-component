@@ -46,13 +46,17 @@ body {
   height: 100vh;
   padding: 1rem;
   margin: 0;
-  background-color: hsl(218, 22%, 67%);
+  background-color: hsla(218, 22%, 67%, 0.5);
   font-family: "Karla", sans-serif;
 }
 
 .subscription {
+  display: grid;
   width: 85vw;
+  max-width: 25rem;
   margin: 3rem 0;
+  border-radius: 5px;
+  box-shadow: 0 3px 10px hsl(218, 22%, 67%);
 }
 .subscription__info {
   display: flex;
@@ -63,7 +67,7 @@ body {
   border-radius: 5px 5px 0 0;
 }
 .subscription__title {
-  font-size: 1.35rem;
+  font-size: clamp(1.35rem, 1.297rem + 0.225vw, 1.5rem);
   font-weight: 700;
   color: hsl(179, 62%, 43%);
   letter-spacing: 0.01em;
@@ -72,15 +76,14 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.5em;
-  font-size: 1rem;
+  font-size: clamp(1rem, 0.982rem + 0.075vw, 1.05rem);
   font-weight: 700;
   color: hsl(71, 73%, 54%);
 }
 .subscription__description {
-  font-size: 0.85rem;
+  font-size: clamp(0.85rem, 0.815rem + 0.15vw, 0.95rem);
   font-weight: 400;
   color: hsl(218, 22%, 67%);
-  font-size: 0.85rem;
   line-height: 1.5;
 }
 .subscription__pricing {
@@ -121,7 +124,14 @@ body {
   width: 100%;
   border: none;
   margin: 2em 0 0;
+  cursor: pointer;
   box-shadow: 0 6px 20px hsla(0, 0%, 0%, 0.2);
+  transition: background 0.5s ease, transform 0.4s ease;
+}
+.subscription__button:hover {
+  background: hsl(71, 73%, 44%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px hsla(0, 0%, 0%, 0.2);
 }
 .subscription__benefits {
   display: flex;
@@ -153,6 +163,37 @@ footer {
 footer a {
   text-align: center;
   color: green;
+}
+
+@media (min-width: 1024px) {
+  .subscription {
+    max-width: 38rem;
+    grid-template-areas: "info info" "pricing benefits";
+    grid-template-columns: 1fr 1fr;
+  }
+  .subscription__info {
+    grid-area: info;
+    padding: 2.1em 3.9em 2.1em 2.1em;
+  }
+  .subscription__description {
+    letter-spacing: 0.01em;
+    margin-top: -0.7em;
+  }
+  .subscription__pricing {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    justify-content: space-between;
+    grid-area: pricing;
+    padding: 2em;
+    border-radius: 0 0 0 5px;
+  }
+  .subscription__benefits {
+    grid-area: benefits;
+    gap: 1em;
+    padding: 2em;
+    border-radius: 0 0 5px 0;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
