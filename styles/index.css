@@ -50,4 +50,79 @@ body {
   font-family: "Karla", sans-serif;
 }
 
+.subscription {
+  width: 85vw;
+}
+.subscription__info {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  background-color: hsl(204, 43%, 93%);
+  border-radius: 5px 5px 0 0;
+  padding: 1em;
+}
+.subscription__title {
+  color: hsl(179, 62%, 43%);
+  width: 100%;
+  font-size: 1.35rem;
+  letter-spacing: 0.01em;
+}
+.subscription__guarantee {
+  display: grid;
+  place-items: center;
+  gap: 1em;
+  color: hsl(71, 73%, 54%);
+  font-size: 1rem;
+  font-weight: 700;
+}
+.subscription__description {
+  color: hsl(218, 22%, 67%);
+  line-height: 1.5;
+}
+.subscription__pricing {
+  background-color: hsl(179, 62%, 43%);
+  color: hsl(204, 43%, 93%);
+  padding: 1em;
+}
+.subscription__price {
+  padding: 1em 0;
+}
+.subscription__price-value {
+  font-size: 1.7rem;
+}
+.subscription__price-period {
+  font-size: 1rem;
+  color: hsla(204, 43%, 93%, 0.8);
+  margin-left: 0.5em;
+}
+.subscription__button {
+  background-color: hsl(71, 73%, 54%);
+  width: 100%;
+  border: none;
+  padding: 1em;
+  margin: 1em 0 0;
+  border-radius: 5px;
+  color: hsl(204, 43%, 93%);
+}
+.subscription__benefits {
+  background-color: hsl(178, 49%, 51%);
+  color: hsl(204, 43%, 93%);
+  border-radius: 0 0 5px 5px;
+  padding: 1em;
+}
+.subscription__benefits-list {
+  padding: 0;
+  line-height: 1.4;
+}
+
+footer {
+  font-size: 0.7rem;
+  color: black;
+  padding-bottom: 1rem;
+}
+footer a {
+  text-align: center;
+  color: green;
+}
+
 /*# sourceMappingURL=index.css.map */

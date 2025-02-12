@@ -8,42 +8,51 @@
   <link rel="preload" href="/assets/fonts/Lexed_Deca/LexendDeca-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin="anonymous">
   <title>Frontend Mentor | Single Price Grid Component</title>
 
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  Join our community
+  <main>
+    <section class="subscription">
+      <article class="subscription__info" aria-labelledby="info-title">
+        <h1 id="info-title" class="subscription__title">Join our community</h1>
+        <h2 class="subscription__guarantee">30-day, hassle-free money back guarantee</h2>
+        <p class="subscription__description">
+          Gain access to our full library of tutorials along with expert code reviews. 
+          Perfect for any developers who are serious about honing their skills.
+        </p>
+      </article>
 
-  30-day, hassle-free money back guarantee
+      <article class="subscription__pricing" aria-labelledby="pricing-title">
+        <h2 id="pricing-title" class="subscription__pricing-title">Monthly Subscription</h2>
+        <div class="subscription__price">
+          <b class="subscription__price-value">&dollar;29</b>
+          <span class="subscription__price-period">per month</span>
+        </div>
+        <p class="subscription__price-description">Full access for less than &dollar;1 a day</p>
+        <button class="subscription__button" aria-label="Sign up for a monthly subscription" type="button">Sign Up</button>
+      </article>
 
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
+      <article class="subscription__benefits" aria-labelledby="benefits-title">
+        <h2 id="benefits-title" class="subscription__benefits-title">Why Us</h2>
+        <ul class="subscription__benefits-list">
+          <li class="subscription__benefit">Tutorials by industry experts</li>
+          <li class="subscription__benefit">Peer & expert code review</li>
+          <li class="subscription__benefit">Coding exercises</li>
+          <li class="subscription__benefit">Access to our GitHub repos</li>
+          <li class="subscription__benefit">Community forum</li>
+          <li class="subscription__benefit">Flashcard decks</li>
+          <li class="subscription__benefit">New videos every week</li>
+        </ul>
+      </article>
+    </section>
+  </main>
 
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+  <footer class="footer">
+    <p class="footer__attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="footer__link">Frontend Mentor</a>. 
+      Coded by <a href="#" class="footer__link">Your Name Here</a>.
     </p>
   </footer>
 </body>
+
+
 </html>
