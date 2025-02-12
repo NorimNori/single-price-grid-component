@@ -1,5 +1,6 @@
 @use 'mixins';
 @use 'colors';
+@use 'fonts';
 
 @mixin formatting {
     *,
@@ -43,5 +44,6 @@
         padding: 1rem;
         margin: 0;
         background-color: colors.$grayishBlue;
+        font-family: 'Karla', sans-serif;
     }
 }
