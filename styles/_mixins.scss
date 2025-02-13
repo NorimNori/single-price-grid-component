@@ -9,7 +9,7 @@
   gap: $gap;
 }
 
-@mixin box-style($bg-color, $padding: 1.5em, $radius: 5px) {
+@mixin box-style($bg-color, $padding: 1.5em, $radius: 0) {
   background-color: $bg-color;
   padding: $padding;
   border-radius: $radius;

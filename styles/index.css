@@ -89,7 +89,7 @@ body {
 .subscription__pricing {
   background-color: hsl(179, 62%, 43%);
   padding: 1.5em;
-  border-radius: 5px;
+  border-radius: 0;
   color: hsl(204, 43%, 93%);
 }
 .subscription__pricing-title {
